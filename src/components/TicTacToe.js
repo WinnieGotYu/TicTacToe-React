@@ -1,11 +1,11 @@
 import React from 'react'; 
 import "../style/TicTacToe.css"
-import Square from './Square';
+import Board from './Board';
 
 const TicTacToe = (props) => {
   return (
       <div className="TicTacToe">
-        <Square />
+        <Board />
       </div>
   )
 }
