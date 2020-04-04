@@ -18,6 +18,9 @@ const Status = styled.h2`
   font-size: 6vw;
   text-align: center;
   margin: 0 0 1rem 0;
+  ${({winner}) => winner &&  `
+    color: green;
+  `}
 `;
 
 const BoardRow = styled.div`
@@ -128,7 +131,7 @@ const Board = () => {
   return (
     <TicTacToeWrapper>
       <Title>Tic Tac Toe</Title>
-      <Status>{status}</Status>
+      <Status winner={winner}>{status}</Status>
       <ImgWrapper>
         {winner ? (
           <Img
